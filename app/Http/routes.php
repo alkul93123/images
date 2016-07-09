@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function ()
+{
+  return view('images.main');
 });
+Route::get('/clear', "ImagesController@deleteAll");
+
+Route::resource('image', 'ImagesController');
