@@ -30,8 +30,6 @@ class ImagesController extends Controller
     ]);
 
     if ($validator->fails()) {
-      // Т.к основная проверка происходит на клиенте, то на сервеной стороне
-      // всего лишь отправим http код ошибки
       abort(415, 'Unsupported Media Type.');
     }
 
